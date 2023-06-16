@@ -1,17 +1,19 @@
 import React from 'react'
 import john from './images/john-doe.png'
+import fabian from './images/fabian100.png'
 import './About.css'
 
 const About = () => {
     return (
         <div className='about' id='about'>
             <div className='container'>
-                <img src={john} alt='john' />
+                <img src={fabian} alt='john' width={600} />
                 <div className='col-2'>
                     <h2>About</h2>
                     <span className='line'></span>
-                    <p>Intense is an International Financial Planning company with offices i n multiple jurisdictions over the world. Working with Intense gives me the ability to advise internat ional expatriates living in the middle east from where I live in USA.</p>
-                    <p>I am John Doe, a senior advisor for an independently owned financial planning company called Intense.</p>
+                    <p>Soy un apasionado Full Stack Developer especializado en el stack MERN (MongoDB, Express.js, React.js y Node.js). Tengo amplia experiencia en el desarrollo de aplicaciones web y móviles, así como en la creación de API RESTful y la implementación de bases de datos NoSQL. 
+                    </p>
+                    <p>Lenguajes de programación: JavaScript, HTML, CSS Frontend: React.js, Redux, HTML5, CSS3 Backend: Node.js, Express.js Bases de datos: MongoDB, Mongoose Herramientas y tecnologías adicionales: Git, RESTful APIs, JSON, JWT, Webpack, Babel</p>
                     <button className='button'>Explore More</button>
                 </div>
             </div>

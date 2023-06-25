@@ -13,11 +13,17 @@
 .header .navbar {
     display: flex;
     justify-content: space-between;
+    /* justify-content: flex-end; */
     align-items: center;
     max-width: 1240px;
     margin: auto;
     height: 100%;
     padding: 0 1rem;
+}
+.header .logo{
+    font-style: italic;
+    font-size: 2rem;
+    color: #ffffff;
 }
 
 .header .nav-menu a {
@@ -25,7 +31,7 @@
 }
 
 .header .navbar img {
-    width: 250px;
+    width: 450px;
     height: auto;
 }
 

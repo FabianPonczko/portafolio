@@ -17,6 +17,7 @@ const Navbar = () => {
                 <a href='/' className='logo'>
                     <img src={logo} alt='logo' />
                 </a>
+                
                 <div className='hamburger' onClick={handleClick}>
                     {click ? (<FaTimes size={30} style={{ color: '#ffffff' }} />)
                         : (<FaBars size={30} style={{ color: '#ffffff' }} />)}
@@ -30,7 +31,7 @@ const Navbar = () => {
                         <a href='#about' onClick={closeMenu}>About</a>
                     </li>
                     <li className='nav-item'>
-                        <a href='#testimonials' onClick={closeMenu}>Testimonials</a>
+                        <a href='#projects' onClick={closeMenu}>Projects</a>
                     </li>
                     <li className='nav-item'>
                         <a href='#demo' onClick={closeMenu}>Demo</a>

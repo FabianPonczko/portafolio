@@ -9,7 +9,10 @@ const Hero = () => {
                 <p>+54-351-8022319</p>
                 <p>Roberto Fabián Ponczko</p>
                 <p>Full Stack Developer</p>
-                <button href='/' className='button'>Free Consultation</button>
+                <a href="#projects">
+                <button href='#projects' className='button'>Projects
+                </button>
+                </a>
             </div>
         </div>
     )

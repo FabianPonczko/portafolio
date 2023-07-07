@@ -15,10 +15,10 @@
     justify-content: space-between;
     /* justify-content: flex-end; */
     align-items: center;
-    max-width: 1240px;
+    /* max-width: 1240px; */
     margin: auto;
     height: 100%;
-    padding: 0 1rem;
+    padding: 1rem 3rem;
 }
 .header .logo{
     font-style: italic;
@@ -42,6 +42,11 @@
 .header .nav-item {
     padding: 1rem;
     font-weight: 500;
+}
+
+.nav-item .active{
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--secondary-color);
 }
 
 .header .nav-item a:hover {
@@ -90,7 +95,7 @@
     }
 
     .header .navbar img {
-        width: 150px;
+        width: 250px;
     }
 }
 

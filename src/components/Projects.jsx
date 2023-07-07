@@ -1,19 +1,35 @@
-import React from 'react'
+import React,{useState}from 'react'
 import user1 from './images/user1.jpeg'
 import user2 from './images/user2.jpeg'
 import user3 from './images/user3.jpeg'
 import foxx from './images/foxx.png'
-import CryptoData from './images/CryptoData.png'
+import CryptoData from './images/CryptoDataRbg.png'
 import './Projects.css'
 
+
 const Projects = () => {
+
+    const [hover,setHover]= useState(false)
+
+    const handleHover =()=>{
+       setHover(!hover)
+    }
+    
+
     return (
         <div className='testimonials' id='projects'>
             <div className='container'>
                 <h2>Projectos</h2>
                 <span className='line'></span>
                 <div className='content'>
-                    <div className='card'>
+                    <div className='card'  onMouseEnter ={handleHover} onMouseLeave={handleHover}>
+                        {hover ?
+                        (<div className='data-hover'>
+                            <p>E-commerce - Tecnologias</p>
+                            <p>Html - Css - Sass - Javascript</p>
+                        
+                        </div>):
+                        null}
                         <p>E-commerce</p>
                         <img src={foxx} alt='foxx' width={500}/>
                         {/* <p>It is not every day that you come across a passionate and trustworthy financial advisor. John Doe is true professional who does his work really well. Thanks John!</p>

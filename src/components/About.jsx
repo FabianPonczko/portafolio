@@ -1,5 +1,4 @@
 import React from 'react'
-import john from './images/john-doe.png'
 import fabian from './images/fabianbg1.png'
 import './About.css'
 

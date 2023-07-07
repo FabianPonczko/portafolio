@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-scroll";
 import "./Hero.css";
-import video from "./videos/video1.mp4";
+import video from "./videos/video.mp4";
 const Hero = () => {
   return (
     <div className="hero" id="home">

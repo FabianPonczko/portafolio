@@ -1,51 +1,78 @@
-import React, { useState } from 'react'
-import { Link } from 'react-scroll'
-import { FaBars, FaTimes } from 'react-icons/fa'
-import logo from './images/logo.png'
+import React, { useState } from "react";
+import { Link } from "react-scroll";
+import { FaBars, FaTimes } from "react-icons/fa";
+import logo from "./images/logo.png";
 
-import './Navbar.css'
+import "./Navbar.css";
 
 const Navbar = () => {
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
 
-    const [click, setClick] = useState(false)
-    const handleClick = () => setClick(!click)
+  const closeMenu = () => setClick(false);
 
-    const closeMenu = () => setClick(false)
+  return (
+    <div className="header">
+      <nav className="navbar">
+        <Link to="home" smooth={true} duration={500} onClick={closeMenu}>
+          Home
+          <a href="">
+            <img src={logo} alt="logo" />
+          </a>
+        </Link>
 
-    return (
-        <div className='header'>
-            <nav className='navbar'>
-                <a href='/' className='logo'>
-                    <img src={logo} alt='logo' />
-                </a>
-                
-                <div className='hamburger' onClick={handleClick}>
-                    {click ? (<FaTimes size={30} style={{ color: '#ffffff' }} />)
-                        : (<FaBars size={30} style={{ color: '#ffffff' }} />)}
-
-                </div>
-                <ul className={click ? "nav-menu active" : "nav-menu"}>
-                    <li className='nav-item'>
-                        {/* <Link href='/' onClick={closeMenu}>Home</Link> */}
-                        <Link to="home" smooth={true}  duration={500} onClick={closeMenu}>Home</Link>
-                        
-                    </li>
-                    <li className='nav-item'>
-                        {/* <a href='#about' onClick={closeMenu}>About</a> */}
-                        <Link to="about" smooth={true} offset={0} duration={500} onClick={closeMenu}>About</Link>
-                    </li>
-                    <li className='nav-item'>
-                        {/* <a href='#projects' onClick={closeMenu}>Projects</a> */}
-                        <Link to="projects" smooth={true} offset={-50} duration={500}  onClick={closeMenu}>Projects</Link>
-                    </li>
-                    <li className='nav-item'>
-                        {/* <a href='#demo' onClick={closeMenu}>Demo</a> */}
-                        <Link to="demo" smooth={true} duration={500} onClick={closeMenu}>Demo</Link>
-                    </li>
-                </ul>
-            </nav>
+        <div className="hamburger" onClick={handleClick}>
+          {click ? (
+            <FaTimes size={30} style={{ color: "#ffffff" }} />
+          ) : (
+            <FaBars size={30} style={{ color: "#ffffff" }} />
+          )}
         </div>
-    )
-}
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <li className="nav-item">
+            <a href="">
+              <Link to="home" smooth={true} duration={500} onClick={closeMenu}>
+                Home
+              </Link>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="">
+              <Link
+                to="about"
+                smooth={true}
+                offset={0}
+                duration={500}
+                onClick={closeMenu}
+              >
+                About
+              </Link>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="">
+              <Link
+                to="projects"
+                smooth={true}
+                offset={-50}
+                duration={500}
+                onClick={closeMenu}
+              >
+                Projects
+              </Link>
+            </a>
+          </li>
+          <li className="nav-item">
+            <a href="">
+              <Link to="demo" smooth={true} duration={500} onClick={closeMenu}>
+                Demo
+              </Link>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
+};
 
-export default Navbar
+export default Navbar;

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-scroll'
 import { FaBars, FaTimes } from 'react-icons/fa'
 import logo from './images/logo.png'
 
@@ -25,16 +26,21 @@ const Navbar = () => {
                 </div>
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
                     <li className='nav-item'>
-                        <a href='/' onClick={closeMenu}>Home</a>
+                        {/* <Link href='/' onClick={closeMenu}>Home</Link> */}
+                        <Link to="home" smooth={true}  duration={500} onClick={closeMenu}>Home</Link>
+                        
                     </li>
                     <li className='nav-item'>
-                        <a href='#about' onClick={closeMenu}>About</a>
+                        {/* <a href='#about' onClick={closeMenu}>About</a> */}
+                        <Link to="about" smooth={true} offset={0} duration={500} onClick={closeMenu}>About</Link>
                     </li>
                     <li className='nav-item'>
-                        <a href='#projects' onClick={closeMenu}>Projects</a>
+                        {/* <a href='#projects' onClick={closeMenu}>Projects</a> */}
+                        <Link to="projects" smooth={true} offset={-50} duration={500}  onClick={closeMenu}>Projects</Link>
                     </li>
                     <li className='nav-item'>
-                        <a href='#demo' onClick={closeMenu}>Demo</a>
+                        {/* <a href='#demo' onClick={closeMenu}>Demo</a> */}
+                        <Link to="demo" smooth={true} duration={500} onClick={closeMenu}>Demo</Link>
                     </li>
                 </ul>
             </nav>

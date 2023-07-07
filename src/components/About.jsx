@@ -1,13 +1,13 @@
 import React from 'react'
 import john from './images/john-doe.png'
-import fabian from './images/fabian100.png'
+import fabian from './images/fabianbg1.png'
 import './About.css'
 
 const About = () => {
     return (
         <div className='about' id='about'>
             <div className='container'>
-                <img src={fabian} alt='john' width={600} />
+                <img src={fabian} alt='fabian foto' width={400} />
                 <div className='col-2'>
                     <h2>About</h2>
                     <span className='line'></span>

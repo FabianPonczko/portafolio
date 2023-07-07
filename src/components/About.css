@@ -11,7 +11,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-
+.about img{
+    margin:auto ;
+    border-radius: 20%
+    
+}
 .about h2 {
     font-size: 3rem;
 }
@@ -25,7 +29,7 @@
 }
 
 .about .col-2 p:first-of-type {
-    margin: 2rem 0;
+    margin: 1.5rem 0;
 }
 
 .about .col-2 p:nth-child(4) {

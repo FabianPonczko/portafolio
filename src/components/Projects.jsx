@@ -1,20 +1,21 @@
 import React,{useState}from 'react'
-import user1 from './images/user1.jpeg'
-import user2 from './images/user2.jpeg'
 import user3 from './images/user3.jpeg'
 import foxx from './images/foxx.png'
 import CryptoData from './images/CryptoDataRbg.png'
 import './Projects.css'
+import { Link } from 'react-scroll'
 
 
 const Projects = () => {
 
     const [hover,setHover]= useState(false)
 
-    const handleHover =()=>{
-       setHover(!hover)
+    const handleHover =(cartName)=>{
+       setHover(cartName)
     }
-    
+    const linkSite =(siteRef)=>{
+        window.open(siteRef,"_blank")
+    }
 
     return (
         <div className='testimonials' id='projects'>
@@ -22,11 +23,13 @@ const Projects = () => {
                 <h2>Projectos</h2>
                 <span className='line'></span>
                 <div className='content'>
-                    <div className='card'  onMouseEnter ={handleHover} onMouseLeave={handleHover}>
-                        {hover ?
-                        (<div className='data-hover'>
-                            <p>E-commerce - Tecnologias</p>
-                            <p>Html - Css - Sass - Javascript</p>
+                    <div className='card'  onMouseEnter ={()=>{handleHover("card1_on")}} onMouseLeave={()=>{handleHover(false)}} onClick={()=>{linkSite("https://foxxcomputacion.netlify.app/")}}>
+                        {hover ==="card1_on"?
+                        (<div className='data-hover' >
+                            <div className='card-text'>
+                                <p>Tecnologias Utilizadas</p>
+                                <p>Html - Css - Sass - Javascript</p>
+                            </div>
                         
                         </div>):
                         null}
@@ -35,7 +38,16 @@ const Projects = () => {
                         {/* <p>It is not every day that you come across a passionate and trustworthy financial advisor. John Doe is true professional who does his work really well. Thanks John!</p>
                         <p><span>Johnson.M.J.</span></p> */}
                     </div>
-                    <div className='card'>
+                    <div className='card' onMouseEnter ={()=>{handleHover("card2_on")}} onMouseLeave={()=>{handleHover(false)}} onClick={()=>{linkSite("https://foxxcomputacion.netlify.app/")}}>
+                    {hover ==="card2_on"?
+                        (<div className='data-hover' >
+                            <div className='card-text'>
+                                <p>Tecnologias Utilizadas</p>
+                                <p>Html - Css - React Native</p>
+                            </div>
+                        
+                            </div>):
+                        null}
                         <p>Crypto Data </p>
                         <img src={CryptoData} alt="CryptoData" width={200}/>
                         {/* <img src={user2} alt='user1'/>

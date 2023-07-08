@@ -17,7 +17,6 @@ const Navbar = () => {
     <div className="header">
       <nav className="navbar">
         <Link to="home" smooth={true} duration={500} onClick={closeMenu}>
-          Home
           <a href="">
             <img src={logo} alt="logo" />
           </a>
@@ -44,7 +43,7 @@ const Navbar = () => {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={0}
+                offset={10}
                 duration={500}
                 onClick={closeMenu}
               >

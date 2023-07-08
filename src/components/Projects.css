@@ -1,5 +1,6 @@
 .testimonials {
     width: 100%;
+    height: 100vh;
 }
 
 .testimonials .container {
@@ -52,17 +53,32 @@
 .data-hover{
     width: 95%;
     height: 95%;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     z-index: 100;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
-.card .data-hover p{
+.card-text{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items :center;
+    width: 100%;
+    height: 40%;
+    background-color:rgba(0, 0, 0, 0.8);
+}
+
+.card .data-hover p:first-child {
     color : var(--secondary-dark);
+}
+
+.card .data-hover p:nth-child(2) {
+    color : var(--primary-color);
 }
 
 @media screen and (max-width: 940px) {

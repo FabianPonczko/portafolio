@@ -4,7 +4,6 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import logo from "./images/logo.png";
 
 
-
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -18,7 +17,7 @@ const Navbar = () => {
       <nav className="navbar">
         <Link to="home" smooth={true} duration={500} onClick={closeMenu}>
           <a href="">
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo"/>
           </a>
         </Link>
 

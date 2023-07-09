@@ -28,7 +28,7 @@ const Projects = () => {
                         (<div className='data-hover' >
                             <div className='card-text'>
                                 <p>Tecnologias Utilizadas</p>
-                                <p>Html - Css - Sass - Javascript</p>
+                                <p>HTML - CSS - SASS - JAVASCRIPT</p>
                             </div>
                         
                         </div>):
@@ -43,7 +43,7 @@ const Projects = () => {
                         (<div className='data-hover' >
                             <div className='card-text'>
                                 <p>Tecnologias Utilizadas</p>
-                                <p>Html - Css - React Native</p>
+                                <p>HTML - CSS - REACT NATIVE</p>
                             </div>
                         
                             </div>):

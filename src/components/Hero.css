@@ -13,7 +13,7 @@
 }
 
 .logos :hover{
-    width: 50px;
+    opacity: 0.9;
 }
 video{
     top: 0;

@@ -1,5 +1,5 @@
 .about {
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
     margin: auto;
     padding: 8rem 1rem 0 1rem;
     width: 100%;
@@ -12,11 +12,14 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.about img{
+
+.about img{ 
     margin:auto ;
     border-radius: 50%;
-    background-color:rgba(0, 0, 0, 0.1)
-}
+    background-color:rgba(200, 200, 200, 0.1)     
+} 
+
+
 .about h2 {
     font-size: 3rem;
 }

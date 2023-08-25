@@ -40,10 +40,11 @@
 
 
 @media screen and (max-width: 940px) {
+
     .demo .container {
         max-width: 100%;
         grid-template-columns: 1fr;
-        grid-gap: 30px;
+        grid-gap: 50px;
     }
 
     .demo iframe {
